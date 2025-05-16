@@ -1,5 +1,16 @@
 # GifsApp
 
+Aplicación de Gifs del tutorial {dev/talles} de Angular: De cero a experto edición 2025
+
+## Dev
+
+1. Clonar el repositorio
+2. Instalar las dependencias `npm install`
+3. Iniciar el servidor con `ng serve`
+4. Navegar a `http://localhost:4200/`
+
+<!-- # GifsApp
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10.
 
 ## Development server
@@ -56,4 +67,4 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 
 ## Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page. -->

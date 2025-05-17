@@ -20,10 +20,20 @@ export class GifService {
   private http = inject(HttpClient);
 
   //espacio para almacenar los gifs
-  trendingGifs = signal<Gif[]>([]);
+  trendingGifs = signal<Gif[]>([]); // [gif1, gif2, gif3, gif4, gif5, gif6, gif7, gif8, gif9]
   trendingGifsLoading = signal(true);
-  searchHistory = signal<Record<string, Gif[]>>(loadFromLocalStorage());
 
+  // [[gif1, gif2, gif3], [gif4, gif5, gif6], [gif7, gif8, gif9]]
+  trendingGifGroup = computed<Gif[][]>(() => {
+    const groups = [];
+    for (let i = 0; i < this.trendingGifs().length; i += 3) {
+      groups.push(this.trendingGifs().slice(i, i + 3));
+    }
+    console.log(groups);
+    return groups; // [[gif1, gif2, gif3], [gif4, gif5, gif6], [gif7, gif8, gif9]]
+  });
+
+  searchHistory = signal<Record<string, Gif[]>>(loadFromLocalStorage());
   searchHistoryKeys = computed(() => Object.keys(this.searchHistory()));
 
   constructor() {
